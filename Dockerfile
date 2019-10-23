@@ -1,4 +1,4 @@
-FROM jenkinsci/jenkins:2.0-beta-1
+FROM jenkinsci/jenkins
 USER root
 RUN mkdir /var/log/jenkins
 RUN mkdir /var/cache/jenkins
