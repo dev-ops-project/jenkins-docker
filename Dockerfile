@@ -1,8 +1,8 @@
 FROM jenkinsci/jenkins:2.0-beta-1
 USER root
-
-RUN 
- groupadd -g 999 docker && \
- usermod -aG staff,docker jenkins
-
-user jenkins
+RUN mkdir /var/log/jenkins
+RUN mkdir /var/cache/jenkins
+RUN chown -R jenkins:jenkins /var/log/jenkins
+RUN chown -R jenkins:jenkins /var/cache/jenkins
+USER jenkins
+ENV JAVA_OPTS="-Xmx8192m"
