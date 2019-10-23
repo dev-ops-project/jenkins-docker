@@ -1,5 +1,4 @@
-From Jeniks
-FROM jenkins/jenkins
+FROM jenkinsci/jenkins:2.0-beta-1
 USER root
 
 RUN 
