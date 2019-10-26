@@ -1,4 +1,4 @@
-FROM FROM java:8
+FROM java:8
 RUN wget http://192.168.205.10:8080/jnlpJars/agent.jar
 USER vagrant
 RUN sudo java -jar agent.jar -jnlpUrl http://192.168.205.10:8080/computer/jenkins-slave-1/slave-agent.jnlp -secret e5e2931848f4999740c411679ca67fd67bbc3584432fbc2ee29b7e8fd643e88f
